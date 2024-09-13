@@ -20,15 +20,20 @@ export default defineConfig({
     },
   },
   presets: [
-    presetUno(),
-    presetAttributify(),
+    presetUno({}),
     presetIcons(),
     presetTypography(),
     presetWebFonts({
       fonts: {
-        // ...
+        sans: 'SUSE',
       },
     }),
+  ],
+  preflights: [
+    {
+      getCSS: () => `
+      html, body {margin: 0; padding: 0;}`,
+    },
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
 })
