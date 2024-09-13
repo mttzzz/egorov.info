@@ -40,7 +40,7 @@ jobs:
         id: setup-package-manager
         run: |
           echo "manager=" >> $GITHUB_OUTPUT
-          echo "command=i" >> $GITHUB_OUTPUT
+          echo "command=install" >> $GITHUB_OUTPUT
       - name: Setup Pnpm
         uses: actions/setup-node@v4
         with:
