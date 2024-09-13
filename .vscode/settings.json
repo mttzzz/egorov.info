@@ -1,7 +1,8 @@
 {
     "cSpell.words": [
         "Fooocus",
-        "nuxi"
+        "nuxi",
+        "Websockets"
     ],
     "eslint.useFlatConfig": true,
     // Disable the default formatter, use eslint instead
