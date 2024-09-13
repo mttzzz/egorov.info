@@ -1,0 +1,16 @@
+.git
+.github
+.nuxt
+.output
+dist
+.vscode
+.idea
+node_modules
+
+
+
+
+.env
+.gitignore
+README.md
+configmap.yaml
