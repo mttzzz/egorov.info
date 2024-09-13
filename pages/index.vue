@@ -3,7 +3,7 @@ const profile = {
   name: 'Kirill Egorov',
   email: 'kirill_egorov@me.com',
   phone: '+375296117699',
-  linkedin: 'https://www.linkedin.com/in/kirill-egorov-696816121/',
+  linkedin: 'https://www.linkedin.com/in/kirill-egorov696816121',
   location: 'Minsk',
   gender: 'Male',
   skills: [
@@ -19,25 +19,37 @@ const profile = {
     'Git',
     'Kubernetes',
     'Docker',
-    'Github actions',
-    'Php',
+    'Github Actions',
+    'PHP',
     'Laravel',
     'Tailwind CSS',
+    'PhpUnit',
+    'Laravel Pint',
+    'Laravel Horizon',
+    'Laravel Nova',
+    'Uno CSS',
+    'Asterisk',
+    'Websockets',
+    'AmoCRM',
+    'Chrome Extensions',
+    'MySQL',
+    'Terraform',
+    'Business Strategy',
+    'Customer Service',
+    'Managing Team Priorities',
+    'Strong Communication Skills',
   ],
-  summary: `I am a skilled creative software engineer with a strong passion for quality and 
-  leadership skills. 9+ years of professional experience in the Software Industry 
-  under various technologies. Full-cycle of creation and development architecture 
-  solutions for several business streams from the idea to ready market products.`,
+  summary: `I am a skilled creative software engineer with a strong passion for quality, and leadership skills. 9+ years of professional experience in Software Industry under various technologies. Full-cycle of creation and development architecture solutions for several business streams from the idea to ready market products. Preparing and presenting technical solutions for new features, products, processes, and improvements/rewrites for existing products and processes. My key strength is the ability to tame the chaos of software engineering, and my background allows me to have an infinite range of creative approaches to do just that. I am also exceptionally good at explaining stuff I understand, and interpreting stuff people say.`,
   projects: [
     {
-      name: 'Widget for generating documents in amoCRM',
-      description: 'A widget for amoCRM allowing integration with Google and document generation.',
-      technologies: 'Vue3, Typescript, Pinia, Tailwind CSS, Naive-UI, Laravel',
+      name: 'Widget for Generating Documents in amoCRM',
+      description: `The purpose was to create a widget for the amoCRM system that allows you to connect a Google account and both generate documents using templates and upload external files. Enables you to view files directly inside amoCRM and perform operations on them (CRUD).`,
+      technologies: 'Vue3, Typescript, Pinia, Tailwind CSS, ky, Naive-UI, Laravel',
     },
     {
       name: 'chatgpt.pushka.biz',
-      description: 'A web app for communication with AI models like OpenAI, Anthropic, and more.',
-      technologies: 'Nuxt 3, Typescript, Pinia, Tailwind CSS, Prisma, MySQL',
+      description: `The purpose was to create a web application for convenient communication with neural networks from OpenAI, Anthropic, and image generation via Midjourney and Stable Diffusion (Fooocus).`,
+      technologies: 'Nuxt 3, Typescript, Pinia, Tailwind CSS, ky, Naive-UI, Prisma, MySQL',
     },
   ],
   jobs: [
@@ -45,15 +57,49 @@ const profile = {
       title: 'CTO, Fullstack Developer',
       company: 'Easy Standart, Belarus',
       dates: 'Mar 2016 - Present',
-      responsibilities: `Communication with customers; Business logic analysis; 
-      Development of full solution architecture and technology stack.`,
+      responsibilities: `Communication with customers; Business logic analysis; Development of a full solution architecture and the technology stack; Requirements gathering, clarification and analysis; Design creation; Task formulation; Quality control; Development of the site management system on PHP/MySQL.`,
+      languagesAndTechnologies: [
+        'Laravel',
+        'PHP',
+        'MySQL',
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'Node JS',
+        'Vue',
+        'Nuxt',
+      ],
     },
     {
       title: 'Fullstack Developer',
       company: 'Freelance, Belarus',
       dates: 'Oct 2016 - Present',
-      responsibilities: `Requirements gathering, development of new features, 
-      API development, and setup of development processes.`,
+      responsibilities: `Requirements gathering, clarification and analysis; Increased functionality and development of new features; Quality control; HTML coding; API development; Processing and development of algorithms for storing a large number of audio files; Implemented functionality for detecting author, album, year of release of the uploaded track; Set up development processes on the project; Task distribution; Customer communication.`,
+      languagesAndTechnologies: [
+        'Laravel',
+        'PHP',
+        'MySQL',
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'Node JS',
+        'Vue',
+        'Nuxt',
+      ],
+    },
+    {
+      title: 'DevOps Engineer',
+      company: 'Freelance, Belarus',
+      dates: 'Sep 2020 - Present',
+      responsibilities: `Creating and configuring CI/CD infrastructure; Creating scripts for managing and deploying infrastructure; Researching and creating Proof of Concepts for deploying production/staging/development infrastructure.`,
+      languagesAndTechnologies: [
+        'Kubernetes',
+        'Docker',
+        'GitHub Actions',
+        'Terraform',
+        'CI/CD',
+        'Scripting',
+      ],
     },
   ],
   education: 'Belarusian State University; Faculty of Law, Taxes and Banks (2000 - 2005)',
@@ -161,7 +207,7 @@ const profile = {
             </h2>
             <div
               v-for="job in profile.jobs"
-              :key="job.company"
+              :key="job.company + job.title"
               class="mb-6 bg-gray-700 p-4 rounded-lg"
             >
               <h3 class="text-xl font-semibold text-white">
@@ -172,6 +218,9 @@ const profile = {
               </p>
               <p class="mt-2 text-gray-300">
                 {{ job.responsibilities }}
+              </p>
+              <p class="mt-2">
+                <strong>Technologies:</strong> {{ job.languagesAndTechnologies.join(', ') }}
               </p>
             </div>
           </div>
@@ -200,9 +249,3 @@ const profile = {
     </div>
   </div>
 </template>
-
-<style scoped>
-.container {
-  max-width: 1200px;
-}
-</style>
